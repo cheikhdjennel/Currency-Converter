@@ -15,6 +15,8 @@
 		924507BD266030F700492A57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924507BB266030F700492A57 /* LaunchScreen.storyboard */; };
 		924507C8266030F800492A57 /* Price_ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924507C7266030F800492A57 /* Price_ConverterTests.swift */; };
 		924507D3266030F800492A57 /* Price_ConverterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924507D2266030F800492A57 /* Price_ConverterUITests.swift */; };
+		9251EB5C2662ADE9000ABCA9 /* ConvertedCurrencyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9251EB5B2662ADE9000ABCA9 /* ConvertedCurrencyData.swift */; };
+		92C89F0C2661B93F0003639A /* CurrencyConverterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C89F0B2661B93F0003639A /* CurrencyConverterManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		924507CE266030F800492A57 /* Price ConverterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Price ConverterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		924507D2266030F800492A57 /* Price_ConverterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price_ConverterUITests.swift; sourceTree = "<group>"; };
 		924507D4266030F800492A57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9251EB5B2662ADE9000ABCA9 /* ConvertedCurrencyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertedCurrencyData.swift; sourceTree = "<group>"; };
+		92C89F0B2661B93F0003639A /* CurrencyConverterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +105,9 @@
 			children = (
 				924507B0266030F700492A57 /* AppDelegate.swift */,
 				924507B2266030F700492A57 /* SceneDelegate.swift */,
-				924507B4266030F700492A57 /* ViewController.swift */,
-				924507B6266030F700492A57 /* Main.storyboard */,
+				924507E22660311D00492A57 /* Model */,
+				924507E12660311800492A57 /* View */,
+				924507E02660311300492A57 /* Controller */,
 				924507B9266030F700492A57 /* Assets.xcassets */,
 				924507BB266030F700492A57 /* LaunchScreen.storyboard */,
 				924507BE266030F700492A57 /* Info.plist */,
@@ -126,6 +131,31 @@
 				924507D4266030F800492A57 /* Info.plist */,
 			);
 			path = "Price ConverterUITests";
+			sourceTree = "<group>";
+		};
+		924507E02660311300492A57 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				924507B4266030F700492A57 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		924507E12660311800492A57 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				924507B6266030F700492A57 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		924507E22660311D00492A57 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92C89F0B2661B93F0003639A /* CurrencyConverterManager.swift */,
+				9251EB5B2662ADE9000ABCA9 /* ConvertedCurrencyData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,8 +290,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				924507B5266030F700492A57 /* ViewController.swift in Sources */,
+				9251EB5C2662ADE9000ABCA9 /* ConvertedCurrencyData.swift in Sources */,
 				924507B1266030F700492A57 /* AppDelegate.swift in Sources */,
 				924507B3266030F700492A57 /* SceneDelegate.swift in Sources */,
+				92C89F0C2661B93F0003639A /* CurrencyConverterManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +11,132 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Price_Converter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Rfz-fr-Zxz" userLabel="GlobalStackV">
+                                <rect key="frame" x="0.0" y="49" width="414" height="747"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price Converter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24Y-mc-tFT" userLabel="PriceConverterTitle">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="pFE-mN-cRx" userLabel="PriceTextF">
+                                        <rect key="frame" x="0.0" y="184" width="414" height="90"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="FQe-Y6-nXp" userLabel="PriceToEnterTextF">
+                                                <rect key="frame" x="0.0" y="0.0" width="182" height="90"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2U-d1-FPZ">
+                                                        <rect key="frame" x="79.666666666666671" y="0.0" width="22.666666666666671" height="32.333333333333336"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter price " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gLj-Px-Le3">
+                                                        <rect key="frame" x="31" y="34.333333333333314" width="120" height="55.666666666666657"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="jxc-a2-nzX"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="continue"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="XLx-pF-PZI" userLabel="ResultPriceTextF">
+                                                <rect key="frame" x="232" y="0.0" width="182" height="90"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygp-7G-4lO">
+                                                        <rect key="frame" x="73.666666666666686" y="0.0" width="34.666666666666657" height="32.333333333333336"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Result " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WXJ-MD-35x">
+                                                        <rect key="frame" x="31" y="34.333333333333314" width="120" height="55.666666666666657"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="CJn-gk-3TR"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="jOY-Ck-GfH"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvK-T1-Pc9">
+                                        <rect key="frame" x="0.0" y="417.33333333333331" width="414" height="33.333333333333314"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJl-T8-9qn" userLabel="ConvertButton">
+                                                <rect key="frame" x="57" y="-8.3333333333333144" width="300" height="50"/>
+                                                <color key="backgroundColor" red="0.71814621696259318" green="1" blue="0.63529957319556307" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="6w6-Ls-6tQ"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="MT1-CR-ifr"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                <state key="normal" title="Convert">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="ConvertButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nwe-v0-fXd"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" name="BackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="bJl-T8-9qn" firstAttribute="centerY" secondItem="lvK-T1-Pc9" secondAttribute="centerY" id="0k6-Ct-cvw"/>
+                                            <constraint firstItem="bJl-T8-9qn" firstAttribute="top" secondItem="lvK-T1-Pc9" secondAttribute="top" constant="-8.3333333333333144" id="TvK-Xy-mLH"/>
+                                            <constraint firstItem="bJl-T8-9qn" firstAttribute="centerX" secondItem="lvK-T1-Pc9" secondAttribute="centerX" id="yrY-O6-6OH"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2hE-U2-B9D" userLabel="PickerStackV">
+                                        <rect key="frame" x="0.0" y="531" width="414" height="216"/>
+                                        <subviews>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="21c-Yy-xgL" userLabel="FromCurrencyPickerV">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="216"/>
+                                            </pickerView>
+                                            <pickerView contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="WJd-RE-UxI" userLabel="ToCurrencyPickerV">
+                                                <rect key="frame" x="207" y="0.0" width="207" height="216"/>
+                                            </pickerView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Rfz-fr-Zxz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FBh-Xp-ydc"/>
+                            <constraint firstAttribute="trailing" secondItem="Rfz-fr-Zxz" secondAttribute="trailing" id="IeA-Hs-XCi"/>
+                            <constraint firstItem="Rfz-fr-Zxz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="RyV-P3-XgU"/>
+                            <constraint firstAttribute="bottom" secondItem="Rfz-fr-Zxz" secondAttribute="bottom" constant="100" id="nlh-gz-lcY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="CurrencyToConvertTo" destination="WJd-RE-UxI" id="Hrs-Fh-OAH"/>
+                        <outlet property="FirstCurrencySignLabel" destination="f2U-d1-FPZ" id="DiD-Zo-77I"/>
+                        <outlet property="PriceCurrencyYouHave" destination="21c-Yy-xgL" id="hi9-Vp-ujt"/>
+                        <outlet property="PriceToConvert" destination="gLj-Px-Le3" id="7ox-tw-n9d"/>
+                        <outlet property="ResultPrice" destination="WXJ-MD-35x" id="znB-FA-PYM"/>
+                        <outlet property="SecondCurrencySignLabel" destination="ygp-7G-4lO" id="vcP-kC-VLM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="BackgroundColor">
+            <color red="1" green="0.71799999475479126" blue="0.12600000202655792" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

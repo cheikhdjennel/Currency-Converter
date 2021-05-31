@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+struct ConvertedCurrencyData : Decodable {
+    
+    var from : String = ""
+    var to : String = ""
+    var amount : Double = 0.0
+    
+    
+    
+}
