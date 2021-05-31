@@ -23,12 +23,11 @@ struct CurrencyConverterManager  {
     var result : String?
     var delegate : CurrencyConverterDelegate?
     
-    let headers = [
-        "x-rapidapi-key": "a64126012cmshbb04901c715d3aap1a8715jsn871e304434b4",
-        "x-rapidapi-host": "currency-converter13.p.rapidapi.com"
-    ]
+    let apiKey = "a64126012cmshbb04901c715d3aap1a8715jsn871e304434b4"
     
      func exchangeCurrency ( from : String , to : String , amount : String ) {
+      
+
         var url = "https://currency-converter13.p.rapidapi.com/convert?from="+from+"&to="+to+"&amount="+amount
         
         getExchangePrice(stringUrl: url)
@@ -37,6 +36,10 @@ struct CurrencyConverterManager  {
     }
     
      func getExchangePrice(stringUrl : String)   {
+       let headers = [
+                 "x-rapidapi-key": apiKey ,
+                 "x-rapidapi-host": "currency-converter13.p.rapidapi.com"
+             ]
         let request = NSMutableURLRequest(url: NSURL(string: stringUrl)! as URL,cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
         
         request.httpMethod = "GET"
