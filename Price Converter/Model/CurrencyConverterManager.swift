@@ -23,8 +23,7 @@ struct CurrencyConverterManager  {
     var result : String?
     var delegate : CurrencyConverterDelegate?
     
-    let apiKey = "a64126012cmshbb04901c715d3aap1a8715jsn871e304434b4"
-    
+    let apiKey = K.apiKey
      func exchangeCurrency ( from : String , to : String , amount : String ) {
       
 
